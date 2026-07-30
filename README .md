@@ -1,19 +1,19 @@
 # CLI-Threat-Analyzer (Log & Security Copilot)
 
-##  Overview
+## Overview
 A powerful command-line interface (CLI) tool that brings Google's Gemini AI directly into your terminal. Designed for developers, sysadmins, and security professionals to instantly analyze system logs, security reports, code files, and images without ever leaving PowerShell or the command line.
 
-## ✨ Features
+## Features
 *   **Log & Report Analysis:** Quickly feed server logs (e.g., Apache/Nginx, SSH logs) to the AI to identify security threats, errors, or anomalous IPs.
 *   **Multi-Modal Capabilities:** Upload local files and images directly through the terminal for AI inspection.
 *   **Seamless Terminal Integration:** Interactive chat session built purely in Python, optimized for rapid troubleshooting.
 
-## 🛠️ Tech Stack
+## Tech Stack
 *   **Language:** Python 3.x
 *   **AI Engine:** Google Gemini API
 *   **Environment:** Windows PowerShell, Linux Bash, or macOS Terminal
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
