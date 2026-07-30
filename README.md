@@ -13,7 +13,7 @@ A powerful command-line interface (CLI) tool that brings Google's Gemini AI dire
 *   **AI Engine:** Google Gemini API
 *   **Environment:** Windows PowerShell, Linux Bash, or macOS Terminal
 
-## Installation & Setup
+## Installation & Setup ^-^
 
 1.  **Clone the repository:**
     ```bash
