@@ -27,7 +27,7 @@ A powerful command-line interface (CLI) tool that brings Google's Gemini AI dire
     ```
     
 
-3.  **Environment Variables:**
+3.  **Environment Variables:** ^.^
     Create a `.env` file in the root directory and add your API key. 
     **Important:** Do not use Python syntax inside the `.env` file. It should look exactly like this:
     ```env
