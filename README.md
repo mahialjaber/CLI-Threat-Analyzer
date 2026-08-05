@@ -25,6 +25,7 @@ A powerful command-line interface (CLI) tool that brings Google's Gemini AI dire
     ```bash
     pip install -r requirements.txt
     ```
+    
 
 3.  **Environment Variables:**
     Create a `.env` file in the root directory and add your API key. 
