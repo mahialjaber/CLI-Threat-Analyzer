@@ -1,1 +1,2 @@
-protobuf==7.35.1
+google-genai>=1.0.0
+python-dotenv>=1.0.0
