@@ -1,16 +1,16 @@
-# CLI-Threat-Analyzer (Log & Security Copilot)
+# CLI-Threat-Analyzer (Log & Security Triage Utility)
 
 ## Overview
-A command-line tool that integrates Google's Gemini AI directly into your terminal. Designed for developers, sysadmins, and security analysts to analyze system logs, security reports, code files, and images without leaving PowerShell or the command line.
+A Python command-line utility for rapid security triage directly in your terminal. Designed for SOC analysts, sysadmins, and security engineers to parse system logs, extract IOCs, inspect suspicious files, and analyze threat reports without leaving PowerShell or the command line.
 
 ## Features
-* **Log & Report Analysis:** Feed server logs (Apache/Nginx, auth logs, Windows events) to the AI to identify security threats, errors, or suspicious IP addresses.
-* **Multi-Modal Capabilities:** Inspect local files and images directly through the terminal.
+* **Log & Report Analysis:** Feed server logs (Apache/Nginx, auth logs, Windows events) to identify security threats, anomalous IPs, or error spikes.
+* **Multi-Modal Inspection:** Inspect local log dumps, intelligence reports, and security screenshots directly through the terminal.
 * **Terminal Integration:** Interactive terminal session built in Python for fast troubleshooting.
 
 ## Tech Stack
 * **Language:** Python 3.x
-* **AI Engine:** Google Gemini API (`google-genai`)
+* **Core Engine:** Threat Intelligence & Log Parsing Engine (`google-genai` / REST API)
 * **Environment:** Windows PowerShell, Linux Bash, or macOS Terminal
 
 ## Installation & Setup
