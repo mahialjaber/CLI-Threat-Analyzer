@@ -52,3 +52,4 @@ MIT
 
 ## Troubleshooting
 - **Missing API Key Error:** Ensure .env exists in the project root (copied from .env.example) and contains a valid GEMINI_API_KEY.
+- **Python Version:** Python 3.10 or newer is recommended.
