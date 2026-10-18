@@ -49,3 +49,6 @@ A Python command-line utility for rapid security triage directly in your termina
 
 ## License
 MIT
+
+## Troubleshooting
+- **Missing API Key Error:** Ensure .env exists in the project root (copied from .env.example) and contains a valid GEMINI_API_KEY.
