@@ -27,7 +27,7 @@ A Python command-line utility for rapid security triage directly in your termina
    ```
 
 3. **Set up API Key:**
-   Create a `.env` file in the root directory:
+   Copy `.env.example` to `.env` in the root directory (`cp .env.example .env`) and set your key:
    ```env
    GEMINI_API_KEY=your_actual_api_key_here
    ```
