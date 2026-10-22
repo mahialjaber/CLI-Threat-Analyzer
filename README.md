@@ -1,17 +1,24 @@
-# CLI-Threat-Analyzer (Log & Security Triage Utility)
+# CLI-Threat-Analyzer
 
-## Overview
-A Python command-line utility for rapid security triage directly in your terminal. Designed for SOC analysts, sysadmins, and security engineers to parse system logs, extract IOCs, inspect suspicious files, and analyze threat reports without leaving PowerShell or the command line.
+A Python command-line utility for rapid security log triage and threat analysis. Combines local heuristic IOC extraction (IPv4 classification, SHA-256/MD5 hashes, and domains) with Google Gemini API reasoning to analyze log dumps and alert contexts directly from the terminal.
+
+---
 
 ## Features
-* **Log & Report Analysis:** Feed server logs (Apache/Nginx, auth logs, Windows events) to identify security threats, anomalous IPs, or error spikes.
-* **Multi-Modal Inspection:** Inspect local log dumps, intelligence reports, and security screenshots directly through the terminal.
-* **Terminal Integration:** Interactive terminal session built in Python for fast troubleshooting.
+
+* **Heuristic IOC Extraction:** Automatically parses input logs and file uploads using regular expressions to extract and classify public vs. internal IPv4 addresses, cryptographic hashes, and external domains before API processing.
+* **Log & File Triage (`/file`):** Ingests system logs, event dumps, or incident screenshots for security reasoning, MITRE ATT&CK technique mapping, and containment suggestions.
+* **Interactive Terminal Workflow:** Lightweight CLI loop built for rapid investigations without requiring a heavy browser interface.
+
+---
 
 ## Tech Stack
-* **Language:** Python 3.x
-* **Core Engine:** Threat Intelligence & Log Parsing Engine (`google-genai` / REST API)
-* **Environment:** Windows PowerShell, Linux Bash, or macOS Terminal
+
+* **Language:** Python 3.10+
+* **LLM Engine:** Google Gemini API (`google-genai` SDK)
+* **Regex Engine:** Built-in Python `re` & `ipaddress` modules
+
+---
 
 ## Installation & Setup
 
@@ -26,30 +33,33 @@ A Python command-line utility for rapid security triage directly in your termina
    pip install -r requirements.txt
    ```
 
-3. **Set up API Key:**
-   Copy `.env.example` to `.env` in the root directory (`cp .env.example .env`) and set your key:
+3. **Configure API Key:**
+   Copy `.env.example` to `.env` and set your Gemini API key:
    ```env
    GEMINI_API_KEY=your_actual_api_key_here
+   GEMINI_MODEL=gemini-2.5-flash
    ```
-   Or export it in your environment:
-   - **Linux / macOS:** `export GEMINI_API_KEY="your_api_key"`
-   - **PowerShell:** `$env:GEMINI_API_KEY="your_api_key"`
 
-4. **Run the application:**
+4. **Launch the CLI:**
    ```bash
    python cli.py
    ```
 
-## Usage
-* **Chat:** Type your message directly into the prompt.
-* **File Analysis:** Use `/file <path> <optional prompt>`
-  * *Example:* `/file sample_access.log Analyze these server logs for security breaches.`
-  * *Example:* `/file image.png Inspect this screenshot for errors.`
-* **Exit:** Type `exit` or `quit`.
+---
+
+## Usage Examples
+
+* **Ad-hoc Log Triage:** Paste raw log lines directly into the terminal prompt to extract IOCs and ask questions:
+  ```text
+  Analyst: Failed password for invalid user admin from 192.168.1.50 port 54321 ssh2, followed by connection from 45.33.32.156
+  ```
+* **Local File Inspection:** Use `/file <path> <optional prompt>`:
+  ```text
+  Analyst: /file /var/log/auth.log Triage high-severity authentication failures and summarize attacker IPs
+  ```
+
+---
 
 ## License
-MIT
 
-## Troubleshooting
-- **Missing API Key Error:** Ensure .env exists in the project root (copied from .env.example) and contains a valid GEMINI_API_KEY.
-- **Python Version:** Python 3.10 or newer is recommended.
+MIT License. See [LICENSE](LICENSE) for details.
